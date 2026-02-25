@@ -1,31 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --app-bg: #f8fafc;
+  --surface: #ffffff;
+  --surface-border: #e5e7eb;
+  --text-main: #0f172a;
+  --text-muted: #64748b;
+  --primary: #2563eb;
+  --primary-soft: #dbeafe;
+  --shadow-soft: 0 10px 30px rgba(15, 23, 42, 0.06);
+}
+
+body,
+input,
+button,
+select,
+textarea {
+  font-family: 'Inter', 'Roboto', sans-serif;
+}
+
+body {
+  background: var(--app-bg);
+  color: var(--text-main);
+}
+
+.md-main__inner,
+.md-header__inner,
+.md-tabs__inner,
+.md-footer-meta__inner {
+  max-width: 1140px;
+}
+
+.md-content {
+  font-size: 1.03rem;
+  line-height: 1.75;
+}
+
+.md-content h1 {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.2rem;
+}
+
+.md-content h2,
+.md-content h3 {
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.md-typeset p {
+  color: var(--text-main);
+}
+
+.md-typeset hr {
+  border-bottom: 1px solid var(--surface-border);
+}
+
+.md-header,
+.md-tabs {
+  background: #ffffff;
+  color: var(--text-main);
+  border-bottom: 1px solid var(--surface-border);
+}
+
+.md-tabs__link,
+.md-header__topic {
+  color: var(--text-main);
+}
+
+.md-tabs__link--active,
+.md-tabs__link:hover {
+  color: var(--primary);
+}
+
+.md-search__form {
+  border-radius: 12px;
+  border: 1px solid var(--surface-border);
+  background: #ffffff;
+}
+
+.md-search__input {
+  font-size: 0.95rem;
+}
+
+.md-search__input:focus {
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.hero-panel {
+  background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+  border: 1px solid var(--surface-border);
+  border-radius: 20px;
+  padding: 2rem;
+  margin: 0.5rem 0 2rem;
+  box-shadow: var(--shadow-soft);
+}
+
+.hero-kicker {
+  color: var(--primary);
+  font-weight: 600;
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin: 0 0 0.6rem;
+}
+
+.hero-panel h2 {
+  margin: 0;
+  font-size: clamp(1.4rem, 1.7vw, 2rem);
+}
+
+.hero-subtitle {
+  margin: 0.8rem 0 0;
+  color: var(--text-muted);
+}
+
 .chapter-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1rem;
-  margin-top: 1rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin-top: 1.2rem;
 }
 
 .chapter-card {
   display: block;
-  padding: 1.1rem;
-  border: 1px solid currentColor;
-  border-radius: 0.8rem;
+  background: var(--surface);
+  border: 1px solid var(--surface-border);
+  border-radius: 18px;
+  padding: 1.4rem;
   text-decoration: none;
-  transition: transform 180ms ease;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.05);
+  transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
 }
 
 .chapter-card:hover {
-  transform: translateY(-2px);
+  transform: translateY(-4px);
+  border-color: #93c5fd;
+  box-shadow: 0 14px 32px rgba(37, 99, 235, 0.14);
+}
+
+.chapter-card:focus-visible {
+  outline: 3px solid rgba(37, 99, 235, 0.35);
+  outline-offset: 2px;
+}
+
+.chapter-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.8rem;
+}
+
+.chapter-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--primary);
+  background: var(--primary-soft);
+  border: 1px solid #bfdbfe;
 }
 
 .chapter-card h3 {
-  margin: 0 0 0.6rem;
+  margin: 0;
+  color: var(--text-main);
+  font-size: 1.05rem;
 }
 
 .chapter-card p {
-  margin: 0 0 0.75rem;
+  margin: 0 0 1rem;
+  color: var(--text-muted);
 }
 
-.chapter-card span {
+.chapter-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.5rem 0.9rem;
+  border-radius: 10px;
+  background: var(--primary);
+  color: #ffffff;
   font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.chapter-card:hover .chapter-cta {
+  background: #1d4ed8;
+}
+
+@media (max-width: 900px) {
+  .chapter-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-panel {
+    padding: 1.35rem;
+  }
 }
