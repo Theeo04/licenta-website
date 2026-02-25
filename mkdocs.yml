@@ -1,6 +1,6 @@
 site_name: Licenta Homelab
 site_description: Documentatie setup Ubuntu Server + KVM
-site_url: https://ghe-portal.github.io/licenta-presentation-site/
+site_url: https://theeo04.github.io/licenta-website/
 theme:
   name: material
   language: ro
