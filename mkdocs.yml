@@ -1,0 +1,26 @@
+site_name: Licenta Homelab
+site_description: Documentatie setup Ubuntu Server + KVM
+site_url: https://ghe-portal.github.io/licenta-presentation-site/
+theme:
+  name: material
+  language: ro
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - toc.integrate
+    - content.code.copy
+  icon:
+    repo: fontawesome/brands/github
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+extra_css:
+  - stylesheets/extra.css
+docs_dir: docs
+nav:
+  - Home: index.md
+  - Capitole:
+      - Capitol 1 - Configurarea serverului bare metal: capitol-1-configurare-server-bare-metal.md
+      - Capitol 2 - Crearea primului VM si configurare interna de retea: capitol-2-creare-vm-si-configurare-retea.md
