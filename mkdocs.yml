@@ -24,3 +24,4 @@ nav:
   - Capitole:
       - Capitol 1 - Configurarea serverului bare metal: capitol-1-configurare-server-bare-metal.md
       - Capitol 2 - Crearea primului VM si configurare interna de retea: capitol-2-creare-vm-si-configurare-retea.md
+  - Capitol 3 - Configurare servere cu Ansible: capitol-3-configurare-servere-cu-ansible.md
